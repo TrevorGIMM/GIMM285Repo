@@ -1,7 +1,7 @@
 {
-  "name": "public",
+  "name": "server",
   "version": "1.0.0",
-  "description": "285 Website",
+  "description": "285 Server",
   "license": "ISC",
   "author": "Trevor Whitt",
   "type": "commonjs",
@@ -10,7 +10,9 @@
     "test": "bangarang"
   },
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^5.2.1",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "mysql2": "^3.24.5"
   }
 }
