@@ -1,0 +1,155 @@
+:root {
+    /* ===== COLOR PALETTE ===== */
+    --bg: #f5f7ff;
+    --surface: #ffffff;
+
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+
+    --accent: #22c55e;
+    --accent-soft: #a7f3d0;
+
+    --warning: #f59e0b;
+
+    --text: #1f2937;
+    --muted: #6b7280;
+
+    --border: #e5e7eb;
+
+    --shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ===== GLOBAL RESET ===== */
+body {
+    background: linear-gradient(180deg, #f5f7ff 0%, #eef2ff 100%);
+    color: var(--text);
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Override Bootstrap container spacing */
+.container {
+    max-width: 1200px;
+}
+
+/* ===== LINKS BAR ===== */
+a {
+    color: var(--primary);
+    font-weight: 600;
+    margin-right: 12px;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* ===== HEADERS ===== */
+h1, h2 {
+    margin-bottom: 16px;
+}
+
+/* ===== FORM SECTIONS ===== */
+.row {
+    margin-bottom: 16px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* Inputs */
+input,
+select {
+    border-radius: 10px !important;
+    border: 1px solid var(--border) !important;
+    padding: 10px 12px !important;
+    width: 100%;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.15) !important;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+    background: var(--primary);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    background: var(--accent);
+    border: none;
+    color: #0f172a;
+}
+
+.btn-secondary:hover {
+    filter: brightness(0.95);
+}
+
+/* ===== ERROR / SUCCESS MESSAGES ===== */
+.text-danger {
+    background: #fee2e2;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.text-success {
+    background: var(--accent-soft);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* =========================================================
+   🧠 TABLE FIX (IMPORTANT PART)
+   ========================================================= */
+
+/* Make table NOT wrap */
+table {
+    width: 100%;
+    table-layout: auto;   /* key change */
+    border-collapse: collapse;
+}
+
+th, td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;  /* prevents layout break */
+    max-width: 180px;         /* controls runaway columns */
+    padding: 12px 14px;
+}
+
+/* Header styling */
+th {
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+}
+
+/* Row hover */
+tr:hover {
+    background: #eef2ff;
+}
+
+/* ===== TABLE SCROLL WRAPPER ===== */
+#cards {
+    overflow-x: auto;   /* allows horizontal scroll if needed */
+    padding-bottom: 10px;
+}
+
+/* ===== OPTIONAL: nicer scrollbar ===== */
+#cards::-webkit-scrollbar {
+    height: 8px;
+}
+
+#cards::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
